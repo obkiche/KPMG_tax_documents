@@ -13,9 +13,25 @@ pd.set_option('display.float_format', lambda x: '%.f' % x)
 
 # A check for empty cells and a warning for the user to rectify these.
 
-if df.isna().sum().any():
+while True:
+    df.isna().sum().any()
+
     print('Warning, you have empty cells in the document, these will be removed. Please fill these in before applying this process ')
     print( 'These can be found in the following places rows: ', np.where(pd.isnull(df))[0], 'columns: ',np.where(pd.isnull(df))[1])
+    print('Do you want to continue, yes/no? (Warning, typing yes will remove these rows!')
+
+    cont = input("Continue? yes/no > ")
+
+    while cont.lower() not in ("yes", "no"):
+        cont = input("Not a valid answer, continue? yes/no > ")
+
+    if cont == 'yes':
+        continue
+
+    if cont == "no":
+        print("Break")
+        break
+
 
 # rows with empty cells and duplicate rows are removed.    
 df.dropna(axis = 0, how ='any', inplace = True)
@@ -66,9 +82,10 @@ for idx , row in df.iterrows():
 assert "No results found." not in driver.page_source
 driver.close()
 
-# Save it to excel
+# Save it to excel and csv
 
 df.to_excel("KPMG Tax Case - Scraped Data.xlsx", index=False)
+df.to_csv("KPMG Tax Case - CSV_Summarized.csv", index=False, encoding="utf-8-sig")
 
 
 
