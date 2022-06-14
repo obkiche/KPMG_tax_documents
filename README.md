@@ -30,9 +30,12 @@ The customer expects us to be creative and let us to choose the method and to de
 
 - [sklearn](https://scikit-learn.org/stable/install.html)
 
-# Usage
+## Usage
 
 All notebooks are in the notebooks folder
+
+
+## Contributors
 
 - #### [Mahboubeh Faghih Mohammadi](https://github.com/mahboubehfaghih)
 - #### [Malika Obkiche](https://github.com/obkiche)
