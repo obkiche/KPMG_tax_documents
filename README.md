@@ -35,4 +35,6 @@ The customer expects us to be creative and let us to choose the method and to de
 All notebooks are in the notebooks folder
 
 - #### [Mahboubeh Faghih Mohammadi](https://github.com/mahboubehfaghih)
-    - https://www.linkedin.com/in/mahboubeh-faghih-mohammadi/
+- #### [Malika Obkiche](https://github.com/obkiche)
+- #### [Kristof Van de wynckel](https://github.com/KristofVandewynckel)
+
