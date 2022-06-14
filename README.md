@@ -19,3 +19,20 @@ But as you know...time is money ! That's why the company would like to improve t
 They have hired us to work on a NLP-based prototype for automating their task. They asked us to create a tool which scrapes the National Gazette and extracts the content which is relevant to them (*i.e* tax-related content). This content should be delivered in an Excel file similar to the files they are currently working on.
 
 The customer expects us to be creative and let us to choose the method and to design the approach. We can use keyword-based approaches as well as neural models. Feel free to think out-of-the box in order to provide the most original and the most efficient solution.
+
+## The Solution
+
+## Installation
+
+- [numpy](https://numpy.org/)
+
+- [pandas](https://pandas.pydata.org/)
+
+- [sklearn](https://scikit-learn.org/stable/install.html)
+
+# Usage
+
+All notebooks are in the notebooks folder
+
+- #### [Mahboubeh Faghih Mohammadi](https://github.com/mahboubehfaghih)
+    - https://www.linkedin.com/in/mahboubeh-faghih-mohammadi/
