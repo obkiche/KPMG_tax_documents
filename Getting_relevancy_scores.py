@@ -19,4 +19,6 @@ def cosine_score(s1):
     cosine_scores = ("{:.3f}".format(cosine_scores))
     return cosine_scores
 
+# apply cosine_score to a .csv
+
     df['Scores'] = df['Keywords'].apply(cosine_score)
