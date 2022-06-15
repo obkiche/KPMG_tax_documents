@@ -30,6 +30,8 @@ Using Burt's model, we summarized the text and saved it in an Excel file.
 
 The next step is to show you how to use scikit-learn to extract keywords from documents using TF-IDF.
 
+Create an app that takes as input a text and returns the summury of text, the keywords and score how related the text to the taxes.
+
 ## Installation
 
 - [numpy](https://numpy.org/)
