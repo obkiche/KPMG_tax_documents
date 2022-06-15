@@ -21,4 +21,8 @@ def cosine_score(s1):
 
 # apply cosine_score to a .csv
 
-    df['Scores'] = df['Keywords'].apply(cosine_score)
+def cosine_score_csv(filepath):
+    df = pd.read_csv('filepath')
+    df['Scores'] = df['Keywords'].apply(cosine_score())
+
+    df.to_csv("KPMG_final.csv", index=False, encoding="utf-8-sig")

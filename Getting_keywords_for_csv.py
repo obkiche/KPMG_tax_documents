@@ -115,4 +115,4 @@ def keywords_csv(filepath):
         results.append(list(keywords.keys()))
 
     df_idf[["Keywords"]]= results
-    
+    df_idf.to_csv("KPMG_keywords.csv", index=False, encoding="utf-8-sig")
