@@ -22,6 +22,14 @@ The customer expects us to be creative and let us to choose the method and to de
 
 ## The Solution
 
+According to the links and the desired site, we scraped the texts and saved them in a file.
+
+For simplicity, we did some preprocessing.
+
+Using Burt's model, we summarized the text and saved it in a file.
+
+The next step is to show you how to use scikit-learn to extract keywords from documents using TF-IDF.
+
 ## Installation
 
 - [numpy](https://numpy.org/)
