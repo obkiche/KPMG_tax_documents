@@ -106,5 +106,4 @@ def scrape_csv(filepath):
             driver.close()
     # Save it to excel and csv
 
-    df.to_excel("KPMG Tax Case - Scraped Data.xlsx", index=False)
-    df.to_csv("KPMG Tax Case - Scraped Data_csv.csv", index=False, encoding="utf-8-sig")
+    df.to_csv("KPMG_Scraped_Data.csv", index=False, encoding="utf-8-sig")

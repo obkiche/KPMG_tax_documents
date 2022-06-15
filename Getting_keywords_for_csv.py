@@ -114,6 +114,5 @@ def keywords_csv(filepath):
     
         results.append(list(keywords.keys()))
 
-    df=pd.DataFrame(zip(docs,results),columns=['doc','keywords'])
+    df_idf[["Keywords"]]= results
     
-    return df.head()

@@ -127,5 +127,4 @@ def summarize_csv(filepath):
         )[0]["summary_text"]
         
     df = df.reset_index(drop=True)    
-    df.to_excel("KPMG Tax Case - Summarized.xlsx", index=False)
-    df.to_csv("KPMG Tax Case - CSV_Summarized.csv", index=False, encoding="utf-8-sig")
+    df.to_csv("KPMG_summarized.csv", index=False, encoding="utf-8-sig")

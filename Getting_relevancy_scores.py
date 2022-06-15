@@ -1,5 +1,4 @@
 import pandas as pd
-
 from sentence_transformers import SentenceTransformer, util
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -19,3 +18,5 @@ def cosine_score(s1):
     #Output the pairs with their score
     cosine_scores = ("{:.3f}".format(cosine_scores))
     return cosine_scores
+
+    df['Scores'] = df['Keywords'].apply(cosine_score)
