@@ -22,7 +22,7 @@ The customer expects us to be creative and let us to choose the method and to de
 
 ## The Solution
 
-According to the links and the desired website(http://www.ejustice.just.fgov.be/cgi/welcome.pl), we scraped the texts and saved them in an Excel file.
+According to the links and the desired [website](http://www.ejustice.just.fgov.be/cgi/welcome.pl), we scraped the texts and saved them in an Excel file.
 
 For simplicity, we did some preprocessing.
 
