@@ -99,11 +99,13 @@ def scrape_csv(filepath):
 
     
                 # For each url get the html body content and add them to the Text column.
-            for element in driver.find_elements(By.TAG_NAME,"body"):
-                text = element.text
-                df.at[idx,'Text'] = text
-            assert "No results found." not in driver.page_source
+                for element in driver.find_elements(By.TAG_NAME,"body"):
+                    text = element.text
+                    df.at[idx,'Text'] = text
+                assert "No results found." not in driver.page_source
             driver.close()
-    # Save it to excel and csv
+        # Save it to excel and csv
 
-    df.to_csv("KPMG_Scraped_Data.csv", index=False, encoding="utf-8-sig")
+            df.to_csv("KPMG_Scraped_Data.csv", index=False, encoding="utf-8-sig")
+
+scrape_csv('./KPMG Tax Case - Data Set.csv')

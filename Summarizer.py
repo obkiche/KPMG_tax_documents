@@ -98,33 +98,40 @@ def summarize_csv(filepath):
         index = no_symbols.rfind('begin')
     
         corpus = no_symbols[:index]
-    
-        # loading mBart finetune Model
-
-        undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
-            "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"
-        )
-        tokenizer = transformers.MBartTokenizer.from_pretrained("facebook/mbart-large-cc25")
-        summarization_pipeline = transformers.pipeline(
-            task="summarization",
-            model=undisputed_best_model,
-            tokenizer=tokenizer,
-        )
-        summarization_pipeline.model.config.decoder_start_token_id = tokenizer.lang_code_to_id[
+        
+        substring = 'Erratum'
+        if substring in corpus:
+            df.loc[idx,'Summary'] = corpus
+            
+        else:
+            print('check')
+                
+            # loading mBart finetune Model
+        
+            undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
+                "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"
+            )
+            tokenizer = transformers.MBartTokenizer.from_pretrained("facebook/mbart-large-cc25")
+            summarization_pipeline = transformers.pipeline(
+                task="summarization",
+                model=undisputed_best_model,
+                tokenizer=tokenizer,
+            )
+            summarization_pipeline.model.config.decoder_start_token_id = tokenizer.lang_code_to_id[
             "nl_XX"
-        ]
+            ]
 
-        article = corpus 
-        df.loc[idx,'Summary'] = summarization_pipeline(
-            article,
-            do_sample=True,
-            top_p=0.75,
-            top_k=50,
-            # num_beams=4,
-            min_length=50,
-            early_stopping=True,
-            truncation=True,
-        )[0]["summary_text"]
+            article = corpus 
+            df.loc[idx,'Summary'] = summarization_pipeline(
+                article,
+                do_sample=True,
+                top_p=0.75,
+                top_k=50,
+                # num_beams=4,
+                min_length=50,
+                early_stopping=True,
+                truncation=True,
+            )[0]["summary_text"]
         
     df = df.reset_index(drop=True)    
     df.to_csv("KPMG_summarized.csv", index=False, encoding="utf-8-sig")
