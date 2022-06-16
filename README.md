@@ -49,5 +49,5 @@ All notebooks are in the notebooks folder
 
 - #### [Mahboubeh Faghih Mohammadi](https://github.com/mahboubehfaghih)
 - #### [Malika Obkiche](https://github.com/obkiche)
-- #### [Kristof Van de wynckel](https://github.com/KristofVandewynckel)
+- #### [Kristof Vandewynckel](https://github.com/KristofVandewynckel)
 
